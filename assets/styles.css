@@ -1,0 +1,79 @@
+html, body{
+	height: 100%;
+	margin: 0;
+}
+
+body:before {
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	display: block;
+	background: #BFBDBD url(https://source.unsplash.com/category/nature/1920x1080/?landscape) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
+	
+	transform: scale(1.03);
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	width: 100%;
+	margin: 0;
+	z-index: 9999;
+}
+
+.horizontalFlexContainer {
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-content: stretch;
+	align-content: stretch;
+}
+
+.verticalFlexContainer {
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-webkit-align-content: stretch;
+	align-content: stretch;
+}
+
+#mainLeft, #mainCenter, #mainRight{
+  background-color: white;
+}
+
+#mainLeft, #mainRight{
+	margin: auto 0px;
+	padding: 12px;
+	min-height: 50%;
+	width: 16.5%;
+	position: relative;
+}
+
+#mainCenter {
+	width: 66%;
+	margin: 8px;
+	padding: 12px;
+	flex: 2;
+	visibility: hidden;
+}
+
+#profileImg {
+	max-width: 100%;
+}

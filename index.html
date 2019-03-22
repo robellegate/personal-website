@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name=viewport content="width=device-width, initial-scale=1"/>
+	<link rel="icon" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/assets/styles.css"/>
+	<title>Home | Robert Ellegate</title>
+	<script type="text/javascript">
+		"use strict";
+		function loadDoc(fileName) {
+			var xhttp = new XMLHttpRequest();
+			var mainContent = document.getElementById("mainCenter");
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					mainContent.innerHTML = this.responseText;
+					mainContent.style.visibility = "visible";
+				}
+			};
+			xhttp.open("GET", "/"+fileName+"/index.html", true);
+			xhttp.send();
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<div class="horizontalFlexContainer">
+		<div id="mainLeft">
+			<h1>Robert Ellegate</h1>
+			<img id="profileImg"  alt="Robert Ellegate" src="assets/robert.jpg"/>
+			<p>I am a fifth year student at the Rochester Institute of Technology.</p>
+			<p>From Buffalo, NY</p>
+		</div><!-- end mainLeft -->
+		<div id="mainCenter"></div><!-- end mainCenter -->
+		<div id="mainRight">
+			<ul class="verticalFlexContainer">
+				<li><a href="/">Home</a></li>
+				<li><a href="#" onclick="loadDoc('about')">About</a></li>
+				<li><a href="#" onclick="loadDoc('resume')">Resume</a></li>
+			</ul>
+		</div><!-- end mainRight -->
+	</div><!-- end flexContainer -->
+</body>
+</html>
